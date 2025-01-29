@@ -1,9 +1,11 @@
 import streamlit as st 
+###
 
+# After import the dependencies, the set_page_config must be the first function to be called.
 st.set_page_config(
-    page_title="Home",
-    page_icon=":house:",
-    layout="centered",
+    page_title="Home", 
+    page_icon=":house:", # emoji can be used, and images can be used too
+    layout="wide",
     initial_sidebar_state="expanded",
 )
 
