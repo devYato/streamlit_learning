@@ -21,21 +21,21 @@ def save_uploaded_file(uploaded_file):
 
 if choice == 'Home':
     st.subheader('Home')
-    img_file = st.file_uploader("Upload a image", type=['jpg', 'png', 'jpeg'])
+    img_file = st.file_uploader("Upload a image", type=['jpg', 'png', 'jpeg'], accept_multiple_files=True) # when accept multiple files, the return is a list
     if img_file is not None:
-        #how to put a path to save the image using os
-        if st.button('Save image', key='s_img'):
-            save_uploaded_file(img_file)
-            # with open (os.path.join('C:/Windows/Temp', img_file.name), 'wb') as f:
-            #     # f.write(img_file.read()) # works
-            #     f.write(img_file.getbuffer()) # works too
-                 
-        st.image(img_file, caption='Uploaded image', use_container_width=True)
-        # to se details
-        st.write(type(img_file))
-        st.write(dir(img_file))
-        st.write(img_file.name)
-        # st.image(open_img(img_file)) # to display with PIL lib
+        # to se details and download
+        for i in img_file: # or len(img_file)
+            #how to put a path to save the image using os
+            if st.button('Save image', key=i.name):
+                save_uploaded_file(i)
+                # with open (os.path.join('C:/Windows/Temp', img_file.name), 'wb') as f:
+                #     # f.write(img_file.read()) # works
+                #     f.write(img_file.getbuffer()) # works too
+            # st.image(open_img(img_file)) # to display with PIL lib
+            st.image(i, caption=i.name, use_container_width=True)
+            st.write(type(i))
+            st.write(dir(i))
+            st.write(i.name)
         
 elif choice == 'Dataset':
     st.subheader('Dataset')

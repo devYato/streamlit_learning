@@ -4,9 +4,7 @@ this is my readme documentation of all things i going testing and experimenting 
 
 _ps: future me, enjoy!_
 
-#### lambda functions --> lambda arguments: expression
-
-
+#### interesting API's to use
 Dog.ceoAPI: This API provides random images of dogs. Perfect for adding some cute dog pictures to your project1!
 
 HTTP Cats: This API returns cat images based on HTTP status codes. It's a fun way to visualize server responses1.
@@ -26,3 +24,10 @@ News API: Delivers real-time news data from various sources around the world. Us
 GitHub API: Allows you to interact with GitHub repositories, issues, and pull requests. Great for developers working with GitHub3.
 
 Twilio API: Enables you to send and receive SMS messages, make phone calls, and more. Useful for building communication apps3.
+
+
+#### Streamlit Structure
+
+today we have a multipage app that allows to work with more pages and no need to define what  .py file run based on user choice, than 
+
+#### tracking all activities of App
